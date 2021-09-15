@@ -1,0 +1,586 @@
+[
+    {
+      "id": "vink",
+      "name": "Vink",
+      "image": "https://www.natuurpunt.be/sites/default/files/vink.png",
+      "short": "De vink is een bekende tuinvogel. De zang eindigt (bij ons) vaak op suskewiet.",
+      "recon": [
+        "14 - 16 cm, de grootte van een mus",
+        "Mannetjes hebben een blauwgrijs petje, roestrode borst en witte vleugelstrepen (zie foto)",
+        "Vrouwtjes zijn fletser gekleurd (lijkt op vrouwtje huismus)"
+      ],
+      "food": {
+        "description": "De vink eet insecten. In het najaar en de winter wordt dit aangevuld met zaden en bladknoppen.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Elke winter zakken ook heel wat vinken naar de tuinen af. Je ziet ze dan meestal op de grond, op zoek naar zaden die door andere vogels op de voedertafel werden gemorst."
+    },
+    {
+      "id": "keep",
+      "name": "Keep",
+      "image": "https://www.natuurpunt.be/sites/default/files/images/inline/keep-man_r.png",
+      "short": "De keep is de noordelijke tegenhanger van onze vink.",
+      "recon": [
+        "14 - 16 cm",
+        "Opvallende oranje borst en witte buik",
+        "Vaak in groep en in gezelschap van vinken"
+      ],
+      "food": {
+        "description": "De keep komt bij ons enkel voor tussen oktober en begin april. In die periode worden vooral beukennootjes gegeten, maar ook granen en zaadjes van de berk.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Elke winter zakken ook heel wat kepen naar de tuinen af. Je ziet ze dan meestal op de grond, op zoek naar zaden. Vooral in vorst- en sneeuwrijke winters kan het aantal tuinkepen hoog oplopen."
+    },
+    {
+      "id": "appelvink",
+      "name": "Appelvink",
+      "image": "https://www.natuurpunt.be/sites/default/files/appelvink.png",
+      "short": "De appelvink is een gekleurde, forse vink met een krachtige snavel.",
+      "recon": [
+        "16,5 - 18 cm",
+        "Een forse vink met opvallende snavel",
+        "Heeft een dikke, oranjebruine kop en beige met blauwzwarte en witte versieringen"
+      ],
+      "food": {
+        "description": "De appelvink eet vooral zaden van bomen. Ook pitten van vogelkers, zoete kers en zonnebloem zijn erg in trek.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "De meeste appelvinken vind je in bosrijke streken. Appelvinken zijn schuw en waakzaam en vertoeven daarom graag hoog in de boomtoppen."
+    },
+  
+    {
+      "id": "groenling",
+      "name": "Groenling",
+      "image": "https://www.natuurpunt.be/sites/default/files/groenling.png",
+      "short": "De groenling is een dikke, forse zaadeter.",
+      "recon": [
+        "14 - 16 cm",
+        "Opvallende geel/groene verschijning met donker rond het oog ",
+        "Leeft in groepen in dichte struiken"
+      ],
+      "food": {
+        "description": "De groenling eet hoofdzakelijk zaden van kruiden, struiken en bomen. Rozenbottels zijn erg in trek. De stevige snavel wordt gebruikt om de zaden te kraken.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Let vooral op het kanarieachtig gekwetter. Hele families doen zich op de voedertafel rustig tegoed aan (zwarte) zonnebloempitten en ongezouten pinda's."
+    },
+  
+    {
+      "id": "sijs",
+      "name": "Sijs",
+      "image": "https://www.natuurpunt.be/sites/default/files/sijs.png",
+      "short": "De sijs is een geelgroene, kleine en sierlijke neef van de putter.",
+      "recon": [
+        "11 - 12,5 cm",
+        "Klein, geelgroen met kort gevorkt staartje",
+        "Graag in els of berk en vaak in klein groepje"
+      ],
+      "food": {
+        "description": "De sijs eet vooral zaden van els, berk en naaldbomen. De spitse, tamelijk lange en kegelvormige snavel is geschikt om zaden uit halfgeopende den- of sparappels, ,elzenproppen en berkenkatjes te peuteren.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Sijzen spotten doe je best tussen oktober en maart. In broekbossen, parken en tuinen met els en berk kan je (grote) groepen acrobatisch zien bengelen aan elzenpropjes. In strenge winters lusten ze ook graag gepelde pinda's."
+    },
+    {
+      "id": "goudhaantje",
+      "name": "Goudhaantje",
+      "image": "https://www.natuurpunt.be/sites/default/files/goudhaantje.png",
+      "short": "Het goudhaantje is het kleinste vogeltje van Europa.",
+      "recon": [
+        "8,5 - 9,5 cm",
+        "Lichtgroene bovendelen met witte vleugelstreep, een donker oog met witte oogrand, zoals een brilletje",
+        "Opvallende kruinstreep: oranjerood bij de mannetjes en citroengeel bij vrouwtjes"
+      ],
+      "food": {
+        "description": "Goudhanen eten vooral insecten en spinnen. Ze gaan in de boomkruinen op zoek naar hun voedsel. ",
+        "what": "Hoe krijg je het goudhaantje te zien?",
+        "where": "Goudhaantjes zijn beweeglijke vogeltjes, die leven in groepjes. In de winter trekken ze wel met mezen op. De beste kans om een goudhaan te zien is tijdens een boswandeling in een naaldbos."
+      },
+      "see": "Goudhaantjes zijn beweeglijke vogeltjes die leven in groepjes. In de winter trekken ze wel met mezen op. De beste kans om een goudhaan te zien is tijdens een boswandeling in een naaldbos."
+    },
+    {
+      "id": "putter",
+      "name": "Putter",
+      "image": "https://www.natuurpunt.be/sites/default/files/putter.png",
+      "short": "De putter is een vrolijke kwetteraar die vaak voedsel zoekt op distels. Hij staat daarom ook bekend als distelvink.",
+      "recon": [
+        "13 cm",
+        "Vuurrood gezicht en zwart-witte kop",
+        "Inktzwarte vleugel met een brede gele], streep en zwarte staart met kleine witte vlekjes"
+      ],
+      "food": {
+        "description": "De putter eet vooral zaden van distels, kaardenbol, klit, teunisbloem en paardenbloem.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Putters verraden hun aanwezigheid meestal door hun zeer vrolijk klingelend roepje. Sinds een aantal jaar komen putters meer en meer op bezoek op de voedertafel. Je kan ze dan vooral zien op voederbuizen gevuld met nigerzaad en zonnebloempitten."
+    },
+  
+    {
+      "id": "pimpelmees",
+      "name": "Pimpelmees",
+      "image": "https://www.natuurpunt.be/sites/default/files/images/inline/pimpelmees_r.png",
+      "short": "De pimpelmees komt in veel tuinen voor. Je herkent hem aan zijn blauwe delen.",
+      "recon": [
+        "10,5 - 12 cm",
+        "Blauw petje en gele buik",
+        "Lijkt op de koolmees die een zwarte kop heeft"
+      ],
+      "food": {
+        "description": "De pimpelmees eet vooral insecten (bladluizen) en spinnen. In het najaar schakelt hij over op zaden en vruchten. Op de voedertafel zijn vooral ongezouten pindas en ,vetbollen in trek.",
+        "what": "Wat voeder je: vetbollen, slingers ongebrande ongezouten pinda's, halve kokosnoot, vogelzaad en zonnebloempitten",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "De pimpelmees bezoekt graag voedertafels en kan je gemakkelijk in je tuin waarnemen."
+    },
+    {
+      "id": "koolmees",
+      "name": "Koolmees",
+      "image": "https://www.natuurpunt.be/sites/default/files/koolmees.png",
+      "short": "Met zijn zwart petje en gele buik is de koolmees gemakkelijk herkenbaar.",
+      "recon": [
+        "13,5 - 15 cm",
+        "Heeft een opvallende zwarte pet en das",
+        "Niet schuw"
+      ],
+      "food": {
+        "description": "De koolmees eet in het broedseizoen vooral insecten, spinnen, larven en rupsen. In het najaar en de winter schakelen ze over op olierijke zaden, vruchten en ,vetbollen.",
+        "what": "Wat voeder je: vetbollen, slingers ongebrande ongezouten pinda's, halve kokosnoot, vogelzaad en zonnebloempitten",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "De koolmees bezoekt vaak voedertafels. Je kan ze dan ook gemakkelijk in je tuin waarnemen."
+    },
+  
+    {
+      "id": "zwarte mees",
+      "name": "Zwarte mees",
+      "image": "https://www.natuurpunt.be/sites/default/files/zwarte-mees_0.png",
+      "short": "De zwarte mees is een kleine, onopvallende mees die zich vaak hoog in naaldbomen zit.",
+      "recon": [
+        "11 cm",
+        "Kleine, onopvallend gekleurde mees",
+        "Zwarte kop met witte wangvlek en wit],te nekvlek"
+      ],
+      "food": {
+        "description": "De zwarte mees eet in het broedseizoen vooral insecten, spinnen, larven en rupsen. In het najaar en de winter staan vooral zaden op het menu.",
+        "what": "Wat voeder je: vetbollen, slingers ongebrande ongezouten pinda's, halve kokosnoot, vogelzaad en zonnebloempitten",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "Zwarte mezen zingen meestal vanaf de hoogste boom in hun territorium, wat het net iets makkelijker maakt om ze te spotten. In de winter kan je zwarte mezen ook op de voederplaats aantreffen, al is de soort er veel minder talrijk dan de pimpel- en de koolmees."
+    },
+    {
+      "id": "kuifmees",
+      "name": "Kuifmees",
+      "image": "https://www.natuurpunt.be/sites/default/files/kuifmees.png",
+      "short": "De kuifmees valt op met zijn zwart-witte koptekening en driehoekige kuif.",
+      "recon": [
+        "10,5 - 12 cm",
+        "spitse, driehoekige, geschubde kuif (die steil kan worden opgericht)",
+        "grote zwarte bef en zwart halsbandje"
+      ],
+      "food": {
+        "description": "De kuifmees eet vooral insecten en spinnen. Buiten het broedseizoen wordt het dieet aangevuld met zaadjes van els, berk en een aantal naaldbomen.",
+        "what": "Wat voeder je: vetbollen, slingers ongebrande ongezouten pinda's, halve kokosnoot, vogelzaad en zonnebloempitten",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "Het zwaartepunt van het verspreidingsgebied van de kuifmees ligt in de Kempen. De soort is bijzonder honkvast en onderneemt nauwelijks zwerftochten. De beste kans op een kuifmees maak je dus door een bezoek aan een Kempisch naaldbos, bij voorkeur in het vroege voorjaar."
+    },
+    {
+      "id": "staartmees",
+      "name": "Staartmees",
+      "image": "https://www.natuurpunt.be/sites/default/files/staartmees_hugo_willocx.png",
+      "short": "De staartmees lijkt wel een pluizig bolletje wol met een aangeplakte staart.",
+      "recon": [
+        "13-15 cm",
+        "Wit-roze bolletje met lange staart",
+        "Brengt in groep, korte bezoekjes in de tuin"
+      ],
+      "food": {
+        "description": "De staartmees eet vooral insecten en rupsen die ze uit struiken en bomen plukken. Tijdens het voedsel zoeken hangen staartmezen vaak acrobatisch ondersteboven aan de dunste twijgjes. Hun geringe lichaamsgewicht (8,2 g) helpt hen hierbij. In het najaar en de winter wordt het dieet aangevuld met zaden.",
+        "what": "Wat voeder je: vetbollen, slingers ongebrande ongezouten pinda's, halve kokosnoot, vogelzaad en zonnebloempitten",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "Let op zenuwachtige vogelgroepjes die zich haastig door de tuin verplaatsen met een hobbelende, licht golvende vlucht. In de winter kan je ze ook vaak zien op pindaslingers of vetbollen."
+    },
+    {
+      "id": "merel",
+      "name": "Merel",
+      "image": "https://www.natuurpunt.be/sites/default/files/merel-man.png",
+      "short": "De merel komt in veel tuinen voor en is een erg populaire tuinvogel.",
+      "recon": [
+        "23,5 - 29 cm",
+        "Mannetje: zwart, oranje snavel en oogrand (zie foto)",
+        "Vrouwtje: bruin, kleur op de borst kan variëren"
+      ],
+      "food": {
+        "description": "De merel eet vooral regenwormen en slakken. Ook bessen en fruit staan op het menu, vooral in het najaar en de winter. Merels foerageren vaak op de grond, op een ,kort gemaaid gazon of tussen afgevallen bladeren.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "De merel is een van de mooist zingende vogels. In het gras en tussen de afgevallen bladeren foerageren merels graag. Merels houden regelmatig de wacht bij molshoop om regenwormen uit de grond te trekken."
+    },
+    {
+      "id": "huismus",
+      "name": "Huismus",
+      "image": "https://www.natuurpunt.be/sites/default/files/huismus.png",
+      "short": "De tsjilpende huismus is een bekende cultuurvolger.",
+      "recon": [
+        "14 - 16 cm",
+        "Mannetjes zijn opvallender bruin gekleurd dan lichtbruine vrouwtjes (zie foto)",
+        "Tsjilpend in groepjes"
+      ],
+      "food": {
+        "description": "De huismus heeft zich gespecialiseerd in de zaden van cultuurgewassen: tarwe, gerst, haver, gierst en maïs. Aangevuld met een ruim aanbod aan tafelrestjes.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "De huismus gaat er sinds jaren sterk op achteruit, het blijft nog steeds een zeer talrijke broedvogel. De vogel wordt vaker gezien in tuinen op het platteland dan in stadstuinen."
+    },
+    {
+      "id": "ringmus",
+      "name": "Ringmus",
+      "image": "https://www.natuurpunt.be/sites/default/files/ringmus.png",
+      "short": "De ringmus lijkt op de huismus. Hij pikt graag een graantje mee bij de kippen.",
+      "recon": [
+        "12,5 - 14 cm",
+        "Lijkt op huismus, maar heeft bruin kopje, opvallende zwarte vlek op wang en witte halsband",
+        "Vrouwtjes verschillen niet"
+      ],
+      "food": {
+        "description": "De ringmus eet zaden, aangevuld met wat ongewervelden in de zomer. Ze zoekt haar voedsel vooral op de grond. De ringmus is een regelmatige gast aan de voedertafel. Gekookte aardappelen, keukenafval maar vooral gepelde zonnebloempitten en gemengd zangvogelzaad, zijn in de winter erg in trek.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Ringmussen gaan vooral op zoek naar granen in kippenrennen en voederbakken van koeien. Dat zijn dan ook de beste plekken waar je de soort kan spotten."
+    },
+    {
+      "id": "roodborst",
+      "name": "Roodborst",
+      "image": "https://www.natuurpunt.be/sites/default/files/styles/10blokimages_258x211/public/roodborst-vogelposter_0.jpg",
+      "short": "De roodborst is met zijn rond lijfje en rode borst misschien wel de bekendste vogel.",
+      "recon": [
+        "12,5 - 14 cm",
+        "Rood-oranje gekleurde borst",
+        "Meestal alleen, kan fel uithalen naar andere vogels"
+      ],
+      "food": {
+        "description": "De roodborst eet vooral insecten, larven, spinnen, slakken en wormen. In de winter eet hij ook zaden, vruchten en voedselrestjes.",
+        "what": "Wat voeder je: universeel voer, bessen, meelwormen, maden en larven, ongekookte havermout",
+        "where": "Waar voeder je: op de grond, sneeuwvrij. Ook beschut onder heggen en struiken."
+      },
+      "see": "Zodra er wat gespit of gewied wordt in de tuin, is de roodborst er bij om de diertjes weg te pikken. Hij is waakzaam, maar zeker niet schuw."
+    },
+    {
+      "id": "winterkoning",
+      "name": "Winterkoning",
+      "image": "https://www.natuurpunt.be/sites/default/files/winterkoning.png",
+      "short": "De winterkoning is één van onze kleinste broedvogels. Met zijn opgewipt staartje is het een opvallende verschijning.",
+      "recon": [
+        "9 - 10,5 cm",
+        "Vinnig mini vogeltje met opvallend opstaand staartje",
+        "Scharrelt dichtbij de grond"
+      ],
+      "food": {
+        "description": "De winterkoning eet vooral insecten, spinnen, duizendpoten en larven die van bladeren en takjes worden geplukt, dicht tegen de grond aan.",
+        "what": "Wat voeder je: universeel voer, bessen, meelwormen, maden en larven, ongekookte havermout",
+        "where": "Waar voeder je: op de grond, sneeuwvrij. Ook beschut onder heggen en struiken."
+      },
+      "see": "De winterkoning is in Vlaanderen één van de meest algemene broedvogels. Hij valt vooral op door zijn zeer luide, explosieve zang die  eindigt op een trillend wekkertje."
+    },
+  
+    {
+      "id": "boomkruiper",
+      "name": "Boomkruiper",
+      "image": "https://www.natuurpunt.be/sites/default/files/boomkruiper.png",
+      "short": "De boomkruiper lijkt wel een kleine, bruine muis die met schokjes langs de ruwe boomschors naar omhoog klautert, op zoek naar insecten.",
+      "recon": [
+        "12 cm",
+        "Schorsbruin gestreepte bovendelen en roomwitte buik met een fijn gebogen snaveltje",
+        "Schuifelt langs de boomstam omhoog"
+      ],
+      "food": {
+        "description": "De boomkruiper eet het jaarrond vooral insecten(larven) en spinnen.",
+        "what": "Wat voeder je: ongezouten pinda's en noten, vetbollen, zonnebloempitten, kaas zonder korst",
+        "where": "Waar voeder je: in een boomstam op een rustige plek"
+      },
+      "see": "Let eens op de stam van de boom. Door zijn bruinige verenkleed is de boomkruiper goed gecamoufleerd, maar als hij omhoog klautert langs de kale stam is hij gemakkelijk te zien."
+    },
+    {
+      "id": "boomklever",
+      "name": "Boomklever",
+      "image": "https://www.natuurpunt.be/sites/default/files/boomklever.png",
+      "short": "De boomklever is de enige inheemse vogel die zowel naar boven als naar beneden kan klimmen.",
+      "recon": [
+        "12 - 14,5 cm",
+        "Blauwgrijze rug, roestbruine buik en opvallende zwarte oogstreep",
+        "Compact, halsloos, met korte, recht afgesneden staart en forse, spitse snavel"
+      ],
+      "food": {
+        "description": "De boomklever eet vooral ongewervelden (insectenlarven, oorwormen, kevers, spinnen). Het dieet wordt in de herfst en de winter in belangrijke mate aangevuld met zaden en noten.",
+        "what": "Wat voeder je: ongezouten pinda's en noten, vetbollen, zonnebloempitten, kaas zonder korst",
+        "where": "Waar voeder je: in een boomstam op een rustige plek"
+      },
+      "see": "Boomklevers is een echte bosvogel en vind je het hele jaar door in paren. Als de oogst aan beukennootjes mislukt, verplaatsen ze zich en duiken ze ook vaak op in tuinen. Ook op de voedertafel durft hij wel een zonnebloempitje mee te eten."
+    },
+    {
+      "id": "spreeuw",
+      "name": "Spreeuw",
+      "image": "https://www.natuurpunt.be/sites/default/files/spreeuw.png",
+      "short": "De spreeuw is een luidruchtige, zwartglanzende vogel.",
+      "recon": [
+        "19 - 22 cm",
+        "Witte spikkels op de buik die verdwijnen in de zomer",
+        "Stapt fier en zit graag in groep"
+      ],
+      "food": {
+        "description": "De spreeuw peutert met zijn lange spitse snavel in het gras, op zoek naar insecten. In het najaar en de winter staat ook fruit op zijn menu; kersen, druiven, ,vogelkers en appels. Spreeuwen komen niet zo graag op de voedertafel. Je kan hen wel naar je tuin lokken door fruit, kaasrestjes en gekookte aardappelen aan te bieden op een sneeuwvrije plek.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "Na het broedseizoen verzamelen spreeuwen in grote groepen. Voor ze op hun slaapplaats neerstrijken, geven deze indrukwekkende zwermen een wervelende luchtshow. Op zo’n slaapplaats verzamelen soms meer dan één miljoen spreeuwen."
+    },
+    {
+      "id": "zanglijster",
+      "name": "Zanglijster",
+      "image": "https://www.natuurpunt.be/sites/default/files/styles/10blokimages_258x211/public/zanglijster_0.png",
+      "short": "De zanglijster is een bruine lijster met een gevlekte buik.",
+      "recon": [
+        "20 - 22 cm",
+        "Heeft opvallende spikkels op de buik",
+        "Schuw, meestal kortstondig op de voederplaats"
+      ],
+      "food": {
+        "description": "De zanglijster eet slakken, regenwormen, insecten, duizendpoten en pissebedden. De slakkenhuisjes worden tegen een steen stuk geslagen zodat de slak uit haar huisje ,kan worden getrokken. Zanglijsters foerageren altijd op de grond.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen. Het is een onregelmatige gast op een voedertafel, hoewel hij soms wel een graantje mee pikt. Met fruit doe je hem het meeste plezier.",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "Zanglijsters beginnen ruim voor zonsopgang te zingen, van vroeg in het voorjaar tot het begin van de zomer. Eens je de zang (her)kent, wordt het eenvoudig om een zanglijster te zien. Op de grond zijn zanglijsters echter veel schuwer dan merels."
+    },
+    {
+      "id": "grote-lijster",
+      "name": "Grote lijster",
+      "image": "https://www.natuurpunt.be/sites/default/files/grote-lijster.png",
+      "short": "De grote lijster is een forse, bruine lijster met zwarte, ronde vlekjes op de borst.",
+      "recon": [
+        "27 - 28 cm",
+        "Opvallend lange staart, witte borst met zwarte, ronde vlekken",
+        "Bijzonder schuw"
+      ],
+      "food": {
+        "description": "De grote lijster voedt zich met een brede waaier aan ongewervelden (sprinkhanen, spinnen, slakken, regenwormen …). In de winter wordt het dieet aangevuld met ,bessen. Vooral op bessen van de maretak zijn ze verlekkerd.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "De grote lijster komt vooral voor in cultuurlandschap met verspreide (hoge) bomen, populierenbossen, parken, boomgaarden en grote tuinen. De soort is waakzaam en laat zich niet gemakkelijk benaderen."
+    },
+  
+    {
+      "id": "heggenmus",
+      "name": "Heggenmus",
+      "image": "https://www.natuurpunt.be/sites/default/files/heggenmus.png",
+      "short": "De heggenmus is een onopvallende zangvogel. Hij verlaat niet graag de directe omgeving van het struikgewas.",
+      "recon": [
+        "13 - 14,5 cm",
+        "Hij heeft een grijs kopje, spitse snavel en is nooit in groep",
+        "De heggemus scharrelt onopvallend rond op de grond of in hagen en struiken"
+      ],
+      "food": {
+        "description": "De heggenmus eet vooral insecten. In de winter wordt het dieet aangevuld met kleine zaadjes. Hij zoekt zijn voedsel bijna uitsluitend op de grond, hoppend en pikkend, vaak in dichte vegetatie.",
+        "what": "Wat voeder je: universeel voer, bessen, meelwormen, maden en larven, ongekookte havermout",
+        "where": "Waar voeder je: op de grond, sneeuwvrij. Ook beschut onder heggen en struiken."
+      },
+      "see": "De heggenmus is een erg onopvallende, mooi zingende vogel. Overal waar struikgewas of kreupelhout staat, kan je de heggenmus vinden. De soort is algemeen in tuinen en parken en broedt vaak dicht bij de bebouwing, meestal in dicht struikgewas of coniferen."
+    },
+    {
+      "id": "zwarte-kraai",
+      "name": "Zwarte kraai",
+      "image": "https://www.natuurpunt.be/sites/default/files/zwarte-kraai.png",
+      "short": "De zwarte kraai is een zeer intelligente en vindingrijke vogel.",
+      "recon": [
+        "44 - 51 cm",
+        "Grote, intelligente vogel met forse snavel",
+        "Ruimen de natuur op door kadavers te eten"
+      ],
+      "food": {
+        "description": "De zwarte kraai is een alleseter met rauwe roep ‘kraaaa-kraaaa’. Hij voedt zich vooral met ongewervelden en insectenlarven. Ook granen vormen een belangrijk voedselbron, vooral tijdens de herfst en de winter. Verder staan ook muizen, vogeleieren en voedselresten op het menu.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "Zwarte kraaien zitten bijna overal: in open landschappen, bosgebieden, moeras en heide, landbouwgebieden en - in mindere mate - in steden. Door zijn hoge intelligentie en vindingrijkheid, kan de soort zich aanpassen aan elk leefgebied."
+    },
+    {
+      "id": "kauw",
+      "name": "Kauw",
+      "image": "https://www.natuurpunt.be/sites/default/files/kauw.png",
+      "short": "De kauw is een luidruchtige, gedrongen vogel, zwart met een grijs achterhoofd.",
+      "recon": [
+        "30 - 34 cm",
+        "Lijkt op kraai, maar kleiner met grijze nek en witblauwe ogen",
+        "Erg sociaal, vaak in groep"
+      ],
+      "food": {
+        "description": "Kauwen hebben een zeer uitgebreid menu dat voornamelijk bestaat uit kleine ongewervelden (insecten, slakken, spinnen), zaden, granen (vooral in de herfst en de winter), eieren, fruit en soms zelfs muizen. In de omgeving van de mens doen kauwen zich ook tegoed aan etensresten, kattenbrokken en karkassen van overreden dieren.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "Kauwen zijn opvallende, luidruchtige vogels. Een tocht door je gemeente zou zeker enkele kauwen moeten opleveren. Let in het vroeger voorjaar vooral op nestbouwende paartjes in de onmiddellijke omgeving van schouwen. Ook een blik op de kerktoren biedt een goede kans op enkele kauwen."
+    },
+    {
+      "id": "ekster",
+      "name": "Ekster",
+      "image": "https://www.natuurpunt.be/sites/default/files/ekster.png",
+      "short": "De ekster is een grote vogel met een zwart-wit verenkleed en zeer lange, groenglanzende staart.",
+      "recon": [
+        "40 - 51 cm",
+        "Zwart-witte alleseter met lange glanzende staart",
+        "Luidt vaak als eerste alarm bij gevaar (huiskat, roofvogel, vos)"
+      ],
+      "food": {
+        "description": "De ekster is een alleseter. In de herfst vult hij zijn dieet aan met vruchten, in de winter en het voorjaar met zaden (graan, peulgewassen, eikels, noten). Het hele jaar door voeden ze zich met karkassen van verkeersslachtoffers.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij. In voedersilo's en op voederplaatsen op de grond die voorzien van een beschermkooi zodat kleine zangvogels wel maar eksters niet aan het voedsel kunnen. Eksters zullen mindersnel landen op een voederhuisje met een dak."
+      },
+      "see": "De ekster is vooral in het stedelijk gebied zeer algemeen. Eksternesten zijn in de winter en het vroege voorjaar heel erg opvallend. Hoog in de bomen (bij voorkeur populier) zijn de warrige takkennesten onmiskenbaar. Bij gevaar (huiskat, roofvogel, kraai, vos) is de ekster vaak de eerste die luid alarm slaat."
+    },
+    {
+      "id": "gaai",
+      "name": "Gaai",
+      "image": "https://www.natuurpunt.be/sites/default/files/vlaamse-gaai.png",
+      "short": "De gaai is een luidruchtige, bont gekleurde vogel. Hij legt een wintervoorraad aan van eikels en beukennootjes.",
+      "recon": [
+        "32 - 35 cm",
+        "Opvallende blauwe vlek in vleugel",
+        "Golvende vlucht en luide, hese schreeuw"
+      ],
+      "food": {
+        "description": "In de herfst schakelt de gaai over op vruchten (bramen, kersen, frambozen, lijsterbessen) en noten (beukennootjes en hazelnoten). Eikels vormen in het najaar de ,favoriete voedselbron.",
+        "what": "Wat voeder je: gewelde krenten en rozijnen, kaasresten, fruitschillen en klokhuizen, alle soorten bessen en gekookte aardappelen",
+        "where": "Waar voeder je: op de grond, sneeuwvrij, op een open plek met beschutting dichtbij"
+      },
+      "see": "De gaai broedt vooral in loofbossen (vooral in eiken- en beukenbossen). Ook in grote parken en tuinen kan je de soort aantreffen."
+    },
+    {
+      "id": "sperwer",
+      "name": "Sperwer",
+      "image": "https://www.natuurpunt.be/sites/default/files/sperwer.png",
+      "short": "De sperwer is een kleine roofvogel die een supersnelle aanval uitvoert op de vogels op en rond je voedertafel.",
+      "recon": [
+        "28 - 40 cm ",
+        "kleine roofvogel met vrij korte, afgeronde vleugels en lange staart",
+        "mannetje is kleiner dan vrouwtje"
+      ],
+      "food": {
+        "description": "De sperwer eet bijna uitsluitend kleine vogels. Mannetjes gaan vooral voor vinken, mussen, mezen en gorzen, vrouwtjes hebben een voorkeur voor lijsters, spreeuwen en duiven. Prooien worden doorgaans verschalkt door een verrassingsaanval.",
+        "what": "",
+        "where": ""
+      },
+      "see": "De sperwer is een schuwe vogel, maar in de winter duikt hij vaak op in tuinen in een poging om een kleine vogel mee te grissen op de voederplek. De sperwer is een bosrandvogel. Hij verkiest kleinschalige landschappen met voldoende (naald)bos om in te broeden maar jagen doet hij vaker in iets meer open landschappen met voldoende dekking (struiken, houtkanten)."
+    },
+    {
+      "id": "houtduif",
+      "name": "Houtduif",
+      "image": "https://www.natuurpunt.be/sites/default/files/houtduif.png",
+      "short": "De houtduif is onze grootste duif. Je herkent haar aan haar witte halsvlek en haar ritmisch gekoer.",
+      "recon": [
+        "38 - 43 cm",
+        "Grootste duif met witte vlek in de nek en witte streep in de vleugels",
+        "Zoekt op de grond naar zaden of etensresten."
+      ],
+      "food": {
+        "description": "De houtduif eet in de lente vooral knoppen en kiemplanten. In de nazomer wordt overgeschakeld op oogstresten (korrelmaïs en granen), klaverzaadjes, eikels en beukennootjes, terwijl in de winter ook bessen van klimop en plantenwortels op het menu staan.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "In het najaar zal een pas geoogste graan- of maïsakker bijna zeker enkele houtduiven opleveren. Ook rond voederplaatsen van kippen en fazanten hangen meestal wel enkele houtduiven rond."
+    },
+    {
+      "id": "turkse-tortel",
+      "name": "Turkse tortel",
+      "image": "https://www.natuurpunt.be/sites/default/files/turkse-tortel.png",
+      "short": "De Turkse tortel is een elegant, bruingrijs duifje met een zwart nekband.",
+      "recon": [
+        "29 - 33 cm",
+        "Vrij kleine duif met zwart nekbandje",
+        "Zijn vaak met twee"
+      ],
+      "food": {
+        "description": "De Turkse tortel eet vooral plantaardig materiaal met een voorkeur voor granen en zaden.",
+        "what": "Wat voeder je: onkruidzaden, gemengd strooizaad, etensresten, zonnebloempitten",
+        "where": "Waar voeder je: op de grond, op de voedertafel, aan de voederbuis"
+      },
+      "see": "Turkse tortels vind je vaak in de buurt van kippenrennen, waar ze letterlijk een graantje komen meepikken. Ook in stadsparken (waar stadsduiven worden gevoederd) kan je gemakkelijk enkele exemplaren zien. Turkse tortels moet je niet gaan zoeken in afgelegen bossen en natuurgebieden, maar vooral in de buurt van bebouwing."
+    },
+    {
+      "id": "grote-bonte-specht",
+      "name": "Grote bonte specht",
+      "image": "https://www.natuurpunt.be/sites/default/files/specht.png",
+      "short": "De grote bonte specht heeft een zwart-wit verenkleed en een rode broek. Je herkent hem makkelijk.",
+  
+      "recon": [
+        "23 - 26 cm",
+        "Heeft een opvallend rood broekje",
+        "Mannetje heeft rood vlekje op de kop"
+      ],
+      "food": {
+        "description": "De grote bonte specht eet vooral insecten(larven) en schakelt in de winter over op verschillende boomzaden en in mindere mate eikels.",
+        "what": "Wat voeder je: ongezouten pinda's en noten, vetbollen, zonnebloempitten, kaas zonder korst",
+        "where": "Waar voeder je: in een boomstam op een rustige plek"
+      },
+      "see": "De grote bonte specht vind je in alle soorten bos: loofhout, naaldhout of gemengd bos. Een gevarieerde bosstructuur (jonge en oude bomen, dicht en open bos) geniet de voorkeur."
+    },
+    {
+      "id": "groene-specht",
+      "name": "Groene specht",
+      "image": "https://www.natuurpunt.be/sites/default/files/groene-specht_0.png",
+      "short": "De groene specht valt op door zijn groene veren, knalrode kruin en zwart masker.",
+      "recon": [
+        "30 - 36 cm ",
+        "Knalrode kruin, zwart masker en grijsgroene onderdelen"
+      ],
+      "food": {
+        "description": "De groene specht eet vooral mieren. Restanten in de uitwerpselen wijzen uit dat rode bosmieren hun favoriete hap zijn. Ze zoekt haar voedsel bijna uitsluitend op de grond.",
+        "what": "",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "De groene specht vind je vooral in open loofbossen en kleinschalig landbouwgebied met hoogstamboomgaarden, populierenrijen en oude houtsingels. Ook grote tuinen in een bosrijke gebieden krijgen regelmatig een groene specht op bezoek."
+    },
+    {
+      "id": "ijsvogel",
+      "name": "Ijsvogel",
+      "image": "https://www.natuurpunt.be/sites/default/files/ijsvogel.png",
+      "short": "De ijsvogel is met zijn blauwe en oranje kleuren onze meest kleurrijke vogel. Hij wordt steeds vaker gespot in tuinen met een vijver.",
+      "recon": [
+        "17 - 19,5 cm",
+        "blauwe bovenzijde en oranje onderzijde",
+        "lange, dolkvormige snavel"
+      ],
+      "food": {
+        "description": "De ijsvogel leeft van kleine vis. Die lokaliseert hij vanaf zijn zitpost vlak boven het water (vaak op een overhangende tak), en vangt het mij een snoepduik",
+        "what": "",
+        "where": ""
+      },
+      "see": "IJsvogels zijn vaak rusteloos en vliegen weg als je te dicht in de buurt komt. Om langer van de ijsvogel te genieten, loont het om met een verrekijker naar overhangende takken te speuren op een plek waar vaak ijsvgels gesignaleerd zijn. De vogels worden steeds vaker gespot in tuinen met een vijver."
+    },
+    {
+      "id": "halsbandparkiet",
+      "name": "Halsbandparkiet",
+      "image": "https://www.natuurpunt.be/sites/default/files/halsbandparkiet.png",
+      "short": "De halsbandparkiet is een grasgroene, luidruchtige parkiet met een korte, rode haaksnavel.",
+      "recon": [
+        "39 - 43 cm",
+        "Grasgroene parkiet met korte, rode haaksnavel en zeer lange, smalle staart",
+        "Krijsende, luidruchtige aanwezigheid in groepen"
+      ],
+      "food": {
+        "description": "De halsbandparkiet is een alleseter. In Vlaanderen doet de soort zich vooral tegoed aan vruchten en bessen. Appel, peer, meidoorn, mispel, braam en bessen van ,klimop en vlier worden vaak gegeten. Ook zaden van haagbeuk, es en den staan op het menu. Op de voedertafel scoren vooral pinda’s, zonnebloempitten en gemengd zaad goed.",
+        "what": "Wat voeder je: vetbollen, slingers ongebrande ongezouten pinda's, halve kokosnoot, vogelzaad en zonnebloempitten",
+        "where": "Waar voeder je: op de voedertafel, aan de voederbuis, opgehangen in bomen of struiken"
+      },
+      "see": "De halsbandparkiet is een holenbroeder. De soort broedt in stadsparken, grote tuinen en boomgaarden. Halsbandparkieten zoeken elkaar op om te gaan slapen. In de omgeving van die slaapplaatsen is de soort heel gemakkelijk te zien."
+    }
+  ]
