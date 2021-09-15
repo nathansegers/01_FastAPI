@@ -88,3 +88,36 @@ class Bird(BaseModel):
 > vink = Bird(**birds[0])
 > vink.sayHello()
 > ```
+
+### Adding a little bit more structure
+
+- Create a new folder called `routers` in the `app` folder.
+- Inside, we will create a `bird_router.py` and `user_router.py` file.
+
+In these files, we will create a new `APIRouter`, like this.
+
+```python
+router = APIRouter(
+    prefix="/birds",
+    tags=["Bird"],
+    responses={404: {"Bird": "Not found"}},
+)
+```
+
+Now we can use this `router` instead of the `app` from the `main` app.
+
+Copy all the content related to the Birds and Users into their own files, and convert `@app.get()` to `@router.get()`.
+
+Note as well that we have included a `prefix="/birds"` which means that all our API routes inside this router will be prefixed with `/birds`. Convert the routes to reflect your changes.
+
+Now that you have moved them in their own files, make sure to import them from the `main` app.
+
+```python
+from routers import (
+    bird_router as bird, # Just to make an alias, because it looks nicer.
+    user_router as user
+)
+
+app.include_router(bird.router)
+app.include_router(user.router)
+```
