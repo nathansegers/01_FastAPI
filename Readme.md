@@ -48,10 +48,11 @@ As this API is all about Bird spotting, we will add a little bit of structure to
 ```python
 
 # bird.py
+from typing import Optional
 from pydantic import BaseModel
 
 class Bird(BaseModel):
-    uuid: str
+    uuid: Optional[str]
     id: str
     name: str
     short: str
@@ -66,4 +67,24 @@ class Bird(BaseModel):
 - Also make sure there is a method called `sayHello()` on the class which will say something base on the name of the bird or user.
 
 ### Adding routes
-- In `main.py` add a few birds and a user. You can find the JSON of birds in the repo.
+- In `main.py` add a few birds and a user. You can use the JSON file of the birds to read all of them in. We will later use this to seed the database.
+
+- Add a route to GET the list of birds
+- Add a route to GET the list of users.
+
+**Think whether or not you need to have an async method or not...**
+
+**Use the FastAPI documentation to add the following routes**
+
+- Add a route to POST a user to the list.
+- Add a route to GET one bird based on it's ID.
+
+> TIP: To convert a Python dictionary to a  Pydantic model, you can use `Bird(**birdDict)`.
+> This will allow you to access their properties as well.
+> 
+> Try it out:
+> ```python
+> from schemas.bird import Bird
+> vink = Bird(**birds[0])
+> vink.sayHello()
+> ```

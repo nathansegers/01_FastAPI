@@ -1,8 +1,9 @@
+from typing import Optional
 from pydantic import BaseModel
 from datetime import datetime
 
 class User(BaseModel):
-    uuid: str
+    uuid: Optional[str]
     name: str
     locationOfResidence: str
     age: int
