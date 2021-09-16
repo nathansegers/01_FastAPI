@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 
 from models import (
-    bird_model
+    bird_model,
+    user_model
 )
 
 import database as db
