@@ -388,16 +388,22 @@ You could:
 - Add the observations as a list to your user model
 - One observation could contain multiple bird species. I could see 3 doves and an eagle in one observation, at one specific location, so adapt your model for that.
 
-## Further adaptions
 
-Think about further adaptions to this FastAPI which could improve your codebase.
-Try to make it more generic, so you can easily re-use this boilerplate for other projects.
+---
+---
 
-# TODO:
+# Docker deployment
 
-## Dockerizing the FastAPI
+We are working from a Docker [image that was created by the makers of FastAPI](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/).
+Note the details they write there:
 
-> WARNING
+> It will expect a file at /app/app/main.py.
+>
+> Or otherwise a file at /app/main.py.
+>
+> And will expect it to contain a variable app with your FastAPI application.
+
+### Database checks
 > It could be that our database is not fully set-up before our application is started.
 > Of course, we could use the `depends_on` option in Docker, to allow our database to start up first, but that doesn't check if the database was really booted already. It only checks whether the container is start up.
 > To work around this problem, we can use a `prestart` script, which runs before our main app, and waits until our database is active.
@@ -405,5 +411,104 @@ Try to make it more generic, so you can easily re-use this boilerplate for other
 - Add a `backend_pre_start.py` Python script in the root of your `app`. Paste this starter inside
 
 ```python
+from database import db
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+from tenacity import after_log, before_log, retry, stop_after_attempt, wait_fixed
 
+max_tries = 60 * 5  # 5 minutes
+wait_seconds = 1
+
+@retry(
+    stop=stop_after_attempt(max_tries),
+    wait=wait_fixed(wait_seconds),
+    before=before_log(logger, logging.INFO),
+    after=after_log(logger, logging.WARN),
+)
+def init() -> None:
+    try:
+        # Try to create session to check if DB is awake
+        db.execute("SELECT 1")
+    except Exception as e:
+        logger.error(e)
+        raise e
+
+def main() -> None:
+    logger.info("Initializing service")
+    init()
+    logger.info("Service finished initializing")
+
+
+if __name__ == "__main__":
+    main()
 ```
+
+**NOTE:** If you want to, you could write a seeder script and add it to this file as well.
+
+### Dockerfile
+
+The Dockerfile that I gave you in the initial repo contains everything we need. Just try to understand what goes on, if you want you can adapt it for more performance. 
+
+A few things to note:
+- We included an `app/prestart.sh` script to run a few things before launching. This is optional, but we use it to check for our database. We do not need to register it anywhere, the FastAPI docker image knows how to use it. It should contain this:
+    ```bash
+    #!/bin/bash
+    # Let the DB start
+    python /app/backend_pre_start.py
+    ```
+- If you are working on Windows to build your image, we need to use `dos2unix` to convert our `app/prestart.sh` file and make it executable in Linux (/The container). We included it to be safe.
+- Why are we working with a multi-stage Docker build?
+    > **ANSWER**  
+    > ...
+
+### Docker-compose
+To make our life easier (because it's already hard enough as it is ...), we will use Docker Compose once again!
+- Add a service to the already existing `docker-compose.yml`.
+    - Name the service `api`
+    - Add the build option
+        ```yaml
+        build:
+            context: api
+            dockerfile: Dockerfile
+        ```
+    - Make it wait for the database
+    - Add the `.env` file.
+    - Port forward to a port you want
+
+- Make sure to change the `.env` value of the `MYSQL_HOST` to suit the Docker environment.
+- Also uncomment the `birds.json` line in the `bird_router.py` if that is still there.
+
+Start your docker-compose services, and test it out.
+```python
+# Just some fun
+if thingsWentWrong: 
+    fixProblems()
+elif:
+    print("Enjoy your day!")
+```
+# Further adaptions
+
+Think about further adaptions to this FastAPI which could improve your codebase.
+Try to make it more generic, so you can easily re-use this boilerplate for other projects.
+
+- Add a Seeder
+- Add a generic CRUD Router, which you can easily use to inherit by other router classes.
+- Add a frontend to query your API.
+- Add some more routes if you want
+- Nicer exception handling and so on
+- Uploading images
+- ...
+
+# What did you learn?
+
+Fill in something that you learned during this lesson
+
+> ...  
+> ...
+
+## Give three interesting exam questions
+
+1) ...
+2) ...
+3) ...

@@ -13,8 +13,8 @@ router = APIRouter(
     responses={404: {"Bird": "Not found"}},
 )
 
-with open('../../birds.json', 'r') as f:
-  birds = json.load(f)
+# with open('../../birds.json', 'r') as f:
+#   birds = json.load(f)
 
 # @router.get("")
 # def getBirds():
