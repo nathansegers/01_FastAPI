@@ -30,7 +30,7 @@ async def root():
     return {"message": "Hello World"}
 ```
 
-Make sure you are inside your `api > app` folder, then execute `python3 -m uvicorn main:app --reload`. This will launch uvicorn, and make sure it auto-reloads on any change you make. If you are working with Visual Studio Code, you will get a message that there is a port running, and you can open this in the browser.
+Make sure you are inside your `api > app` folder, then execute `python3 -m uvicorn main:app --reload`. This will launch uvicorn, and makes sure it auto-reloads on any change you make. If you are working with Visual Studio Code, you will get a message that there is a port running, and you can open this in the browser.
 VSCode also port-forwards any ports running in a VM.
 
 Visit your application on `127.0.0.1:8000`. You will get a default `{"message":"Hello World"}` if everything goes well.
@@ -39,14 +39,15 @@ The cool thing about FastAPI is that it automatically enables and runs a Swagger
 
 ## Adding our first routes
 
-As this API is all about Bird spotting, we will add a little bit of structure to our API in order to get started.
+This API is all about Bird spotting, a small part of the project will be re-used by other students working on a similar project in other courses. 
+
+We will add a little bit of structure to our project to get started.
 
 ### Schemas
 
-- Create a `schemas` directory under `app`. Add two empty Python files: `bird.py` and `user.py`. Here we will write `pydantic` code to define our models.
+- Create a `schemas` directory under `app`. Add two empty Python files: `bird.py` and `user.py`. Here we will create `pydantic` models.
 
 ```python
-
 # bird.py
 from typing import Optional
 from pydantic import BaseModel
@@ -66,8 +67,11 @@ class Bird(BaseModel):
 
 - Also make sure there is a method called `sayHello()` on the class which will say something base on the name of the bird or user.
 
+---
 ### Adding routes
-- In `main.py` add a few birds and a user. You can use the JSON file of the birds to read all of them in. We will later use this to seed the database.
+- In `main.py` add a few birds and a user. You can use the JSON file of the birds to read all of them in. *We can later use this to seed the database.*
+
+    - Just read in the JSON file and load it in a variable `birds`
 
 - Add a route to GET the list of birds
 - Add a route to GET the list of users.
@@ -89,6 +93,7 @@ class Bird(BaseModel):
 > vink.sayHello()
 > ```
 
+---
 ### Adding a little bit more structure
 
 - Create a new folder called `routers` in the `app` folder.
@@ -106,7 +111,7 @@ router = APIRouter(
 
 Now we can use this `router` instead of the `app` from the `main` app.
 
-Copy all the content related to the Birds and Users into their own files, and convert `@app.get()` to `@router.get()`.
+- Copy all the content related to the Birds and Users into their own files, and convert `@app.get()` to `@router.get()`.
 
 Note as well that we have included a `prefix="/birds"` which means that all our API routes inside this router will be prefixed with `/birds`. Convert the routes to reflect your changes.
 
@@ -121,7 +126,8 @@ from routers import (
 app.include_router(bird.router)
 app.include_router(user.router)
 ```
-
+---
+---
 ## Connect a database
 
 Currently, our application already has a nice, expendable structure. Which is great for future additions!
@@ -138,17 +144,23 @@ We will quickly spin up a database, just like we did last year with Backend deve
 - Add a `docker-compose.yml` file inside the root of your project.
 - Add a `mariadb` service, with the `mariadb:10.5.9` image.
     - Make sure you port-forward port `3306` which is the default mysql port.
-    - Provide a persistent storage in some way. Find out [from the documentation](https://hub.docker.com/_/mysql) where the mysql container keeps it's data. Fill in here: `...`. 
+    - Provide a persistent storage in some way. Find out [from the documentation](https://hub.docker.com/_/mysql) where the mysql container keeps it's data.
+        > **ANSWER**  
+        > Fill in here: `...` 
     - Add `.env` file with the configuration you need for your database. The `MYSQL_HOST` environment variable will be different for a Docker environment and a localhost environment, remember from last year?
     Use `localhost` when you are running it local.
 
-- You can add an `adminer` service with image `adminer:4.8.0`. This app serves as an in-browser database viewer, so that you do not need any other clients installed. This database viewer runs on port `8080` by default. You can remap that to another port if you want. I choose `9999:8080`.
+- You can add an `adminer` service with one of it's image on Docker Hub. This app serves as an in-browser database viewer, so that you do not need any other clients installed. Find out the default port it runs on. You can remap that to another port if you want. I chose 9999.
+    > **ANSWER** "How did you set up the docker-compose service for adminer? Show the YAML here
+    > ```yaml
+    > # Answer here
+    > ```
 
 - Start the Docker Compose services and wait for everything to start up. Use the Visual Studio Code 'Docker' plugin to view your running containers.
 
 - Go to your adminer service, and log in to your database with the information you provided in the `.env` file.
 
-- Check to see if the database you chose in the `.env` file is created. We will not see any tables yet.
+- Check to see if the database you chose in the `.env` file is created. We will not see any tables yet. That's the next step
 
 ### Let's connect from Python now.
 
@@ -157,7 +169,6 @@ As we are going to be developping our application code-first, we will create the
 - Next to the `main.py` add a `database.py` file, which will load in our database connection.
 
 ```python
-
 # database.py
 
 import os
@@ -207,8 +218,8 @@ For this, we will add a folder called `models`. This will contain our database m
 
 - Add a `bird_model.py` and `user_model.py` file.
 
-The basics we need to import for **SQLAlchemy** to notice that we want a table, is the `Base` object which was defined on line 23 of `database.py`:
-(`Base = declarative_base()`).
+The basics we need to import for **SQLAlchemy** to notice that we want a table, is the `Base` object which was defined on line 23 of `database.py`:  
+`Base = declarative_base()`  
 We can use this **Class** as the base for a new class. This will register a new table.
 
 ```python
@@ -258,6 +269,14 @@ food = Column(TextPickleType()) # This will place a dict inside one cell
 
 - Do the same for the User table.
 
+> **Answer** "Paste your Bird and User Classes here"
+> ```python
+> # Bird.py
+> 
+> # User.py
+> 
+> ```
+
 ### Updating routes
 As we now have a database attached to our application, we can start writing new routes to use this database.
 
@@ -289,7 +308,6 @@ The first one will make sure we can add a new Bird to our database, and later on
 
 - Add a first query in a method called `get_all()`
 ```python
-
 def get_all(self):
     try:
         db_objects = db.query(self.model).all() # The actual query
@@ -304,7 +322,42 @@ def get_all(self):
         db.rollback()
 ```
 
-- Copy the previous method to add other interesting queries: **Create a bird**, **Delete a bird**, **Update a bird** **Get one bird based on ID**, **Get many birds based on a property**.
+- Add a second query in a method called `create()`
+```python
+def create(self, obj: BirdSchema):
+    try:
+        obj_in_db = self.get_by(name=obj.name)
+        if obj_in_db is None:
+            print(f"No {self.model} was found with name {obj.name}!")
+
+            new_obj = self.model(**obj.dict())
+            db.add(new_obj)
+            db.commit()
+
+            print(f"{self.model} has been added to the database!")
+            obj = self.schema.from_orm(new_obj)
+        else:
+            obj = None
+            print(f"A {self.model} already exists.")
+
+        return obj
+
+    except Exception as e:
+        print(f"Error while creating {self.model}.")
+        print("Rolling back the database commit.")
+        print(e)
+        db.rollback()
+```
+
+- Copy the previous method to add other interesting queries: **Delete a bird**, **Update a bird** **Get one bird based on ID**, **Get many birds based on a property**.
+
+> **ANSWER** "Paste two of your queries below"
+> ```python
+> # Query 1: UPDATE | DELETE | GET ONE | GET MANY (Select which you chose)
+>
+> # Query 2: UPDATE | DELETE | GET ONE | GET MANY (Select which you chose)
+>
+> ```
 
 - Now that we have to queries, we can start adding them to our routes.
     - Put the previous routes of our Bird Router in a comment, so we still have it, but deactivated.
@@ -324,6 +377,21 @@ def get_all(self):
     ```
 
 - Now test if you can add a bird to your database. Use the birds from your JSON file.
+
+### Optional: Feel free to continue with relations
+Our database is far from finished. To be good, we should add some more models to it, in order to use our relational database to its full potential.
+
+**You are not required to do these adaptions for the rest of the course, but it could help you in working with FastAPI in the future**.
+
+You could:
+- Add an **Observation** model with an `observationDate`, `observationLocation`, `birdsObserved` (which has a relation with birds), and `user` (which has a relation with users)
+- Add the observations as a list to your user model
+- One observation could contain multiple bird species. I could see 3 doves and an eagle in one observation, at one specific location, so adapt your model for that.
+
+## Further adaptions
+
+Think about further adaptions to this FastAPI which could improve your codebase.
+Try to make it more generic, so you can easily re-use this boilerplate for other projects.
 
 # TODO:
 
