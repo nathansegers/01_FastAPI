@@ -121,3 +121,154 @@ from routers import (
 app.include_router(bird.router)
 app.include_router(user.router)
 ```
+
+## Connect a database
+
+Currently, our application already has a nice, expendable structure. Which is great for future additions!
+
+However, it is time to add some databases, so that we can start working with relational data and more!
+
+FastAPI has a package called `SQLAlchemy` included into their app. Together with this package and `Pydantic` we can easily create a database connection.
+
+But first, we'll have to get the database set up.
+
+### Remember Docker?
+We will quickly spin up a database, just like we did last year with Backend development. You'll have to search for a few things tho. I won't give you everything.
+
+- Add a `docker-compose.yml` file inside the root of your project.
+- Add a `mariadb` service, with the `mariadb:10.5.9` image.
+    - Make sure you port-forward port `3306` which is the default mysql port.
+    - Provide a persistent storage in some way. Find out [from the documentation](https://hub.docker.com/_/mysql) where the mysql container keeps it's data. Fill in here: `...`. 
+    - Add `.env` file with the configuration you need for your database. The `MYSQL_HOST` environment variable will be different for a Docker environment and a localhost environment, remember from last year?
+    Use `localhost` when you are running it local.
+
+- You can add an `adminer` service with image `adminer:4.8.0`. This app serves as an in-browser database viewer, so that you do not need any other clients installed. This database viewer runs on port `8080` by default. You can remap that to another port if you want. I choose `9999:8080`.
+
+- Start the Docker Compose services and wait for everything to start up. Use the Visual Studio Code 'Docker' plugin to view your running containers.
+
+- Go to your adminer service, and log in to your database with the information you provided in the `.env` file.
+
+- Check to see if the database you chose in the `.env` file is created. We will not see any tables yet.
+
+### Let's connect from Python now.
+
+As we are going to be developping our application code-first, we will create the tables from our Python code. You can also choose to work model-first, but then you'll still need to write your Python code anyways.
+
+- Next to the `main.py` add a `database.py` file, which will load in our database connection.
+
+```python
+
+# database.py
+
+import os
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+# This will get our environment variables, or some fallback values. But remember that these won't work as the .env file was included for the database
+MYSQL_USER = os.getenv('MYSQL_USER', 'admin')
+MYSQL_HOST = os.getenv('MYSQL_HOST', 'mariadb')
+MYSQL_PORT = os.getenv('MYSQL_PORT', '3306')
+MYSQL_DATABASE = os.getenv('MYSQL_DATABASE', 'default_db')
+MYSQL_PASSWORD = os.getenv('MYSQL_PASSWORD', 'mypassword')
+
+engine = create_engine(
+    f'mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}'
+)
+session = sessionmaker(autoflush=False, bind=engine) 
+
+db = session()
+Base = declarative_base()
+
+def start_db():
+    Base.metadata.create_all(engine)
+```
+
+Before we add link this code into our `main.py` file, we will have to inject our `.env` values.
+
+- Add these lines before getting the `os.getenv()` values.
+```python
+from dotenv import load_dotenv
+
+load_dotenv() # Make sure we have our .env values
+```
+
+- You can now go and start the database connection on the `main.py`
+```python
+import database as db
+db.start_db()
+```
+If you do not have any errors, you can go on. Otherwise, you'll have to fix them first.
+
+### Creating tables
+As I mentioned before, the tables will be created by our Python code itself. So-called **code-first**.
+
+For this, we will add a folder called `models`. This will contain our database models. Not to be confused with the `schemas` which were Pydantic Schema's.
+
+- Add a `bird_model.py` and `user_model.py` file.
+
+The basics we need to import for **SQLAlchemy** to notice that we want a table, is the `Base` object which was defined on line 23 of `database.py`:
+(`Base = declarative_base()`).
+We can use this **Class** as the base for a new class. This will register a new table.
+
+```python
+from database import Base
+class Bird(Base):
+    __tablename__ = 'birds'
+```
+
+To add the different columns, use the [documentation of SQLAlchemy](https://docs.sqlalchemy.org/en/14/orm/tutorial.html) to get what you want.
+
+> **TIP**  
+> If you want to auto-generate a UUID, use the following method
+> ```python
+> def generate_uuid():
+>    return str(uuid.uuid4())
+> ```
+
+- In case you want to add a simple **list** or **dict** inside a column, you can do it like this:
+```python
+
+import json
+import sqlalchemy
+from sqlalchemy.types import TypeDecorator
+
+SIZE = 5120
+
+class TextPickleType(TypeDecorator):
+
+    impl = sqlalchemy.Text(SIZE)
+
+    def process_bind_param(self, value, dialect):
+        if value is not None:
+            value = json.dumps(value)
+
+        return value
+
+    def process_result_value(self, value, dialect):
+        if value is not None:
+            value = json.loads(value)
+        return value
+
+recon = Column(TextPickleType()) # This will place a list inside one cell
+food = Column(TextPickleType()) # This will place a dict inside one cell
+```
+
+- Import your `bird_model` inside your `main.py`, start your application and check if your table has been created.
+
+- Do the same for the User table.
+
+# TODO:
+
+## Dockerizing the FastAPI
+
+> WARNING
+> It could be that our database is not fully set-up before our application is started.
+> Of course, we could use the `depends_on` option in Docker, to allow our database to start up first, but that doesn't check if the database was really booted already. It only checks whether the container is start up.
+> To work around this problem, we can use a `prestart` script, which runs before our main app, and waits until our database is active.
+
+- Add a `backend_pre_start.py` Python script in the root of your `app`. Paste this starter inside
+
+```python
+
+```

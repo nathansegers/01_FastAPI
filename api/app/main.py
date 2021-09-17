@@ -1,4 +1,13 @@
 from fastapi import FastAPI
+
+from models import (
+    bird_model,
+    user_model
+)
+
+import database as db
+db.start_db()
+
 app = FastAPI()
 
 from routers import (
