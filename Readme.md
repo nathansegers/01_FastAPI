@@ -258,6 +258,73 @@ food = Column(TextPickleType()) # This will place a dict inside one cell
 
 - Do the same for the User table.
 
+### Updating routes
+As we now have a database attached to our application, we can start writing new routes to use this database.
+
+The first one will make sure we can add a new Bird to our database, and later on we will query them.
+
+- Update your Bird model to import the db connector `from database import db`
+- Add a property to your Bird model: `self.model = Bird`, so that we can refer to this class in that way.
+- Import your Bird Schema into your model file: `from schemas.bird import Bird as BirdSchema`
+- Add a property to your Bird model: `self.schema = BirdSchema`
+
+- Register your Bird Schema `schemas > bird.py` as an ORM-ready object:
+    ```python
+    class Bird(BaseModel):
+        uuid: Optional[str]
+        id: str
+        name: str
+        short: str
+        image: str
+        recon: list
+        food: dict
+        see: str
+
+        class Config:
+            orm_mode = True
+
+        def sayHello(self):
+            print(f"{self.name} is flying by.")
+    ```
+
+- Add a first query in a method called `get_all()`
+```python
+
+def get_all(self):
+    try:
+        db_objects = db.query(self.model).all() # The actual query
+        if db_objects:
+            return db_objects
+        else:
+            print(f"No {self.model} was found!")
+            return None
+    except Exception as e:
+        print(f"Error while getting all {self.model}s.")
+        print(e)
+        db.rollback()
+```
+
+- Copy the previous method to add other interesting queries: **Create a bird**, **Delete a bird**, **Update a bird** **Get one bird based on ID**, **Get many birds based on a property**.
+
+- Now that we have to queries, we can start adding them to our routes.
+    - Put the previous routes of our Bird Router in a comment, so we still have it, but deactivated.
+    - Import our ORM Model `from models.bird_model import Bird as BirdRepo`. Let's call it a Repo for the sake of logic with Entity Framework. Initialize the repo before you can use it (The methods are not static!) `repo = BirdRepo()`.
+    - Now go ahead and write all the logic, like this: `objects = repo.get_all()`
+
+- To add proper exceptions, import `from fastapi import HTTPException` and edit your routes to raise the error:
+    ```python
+    if objects is None:
+        raise HTTPException(status_code=400, detail="Something went wrong here!")
+    ```
+- To allow Swagger to give us the right API hints, please give your Pydantic scheme as a typehint in your router methods
+    ```python
+    @router.post("")
+    def postBird(bird: Bird):
+        pass
+    ```
+
+- Now test if you can add a bird to your database. Use the birds from your JSON file.
+
 # TODO:
 
 ## Dockerizing the FastAPI
