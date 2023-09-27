@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 
 class Bird(BaseModel):
-    uuid: Optional[str]
+    uuid: Optional[str] = None
     id: str
     name: str
     short: str
@@ -13,7 +13,7 @@ class Bird(BaseModel):
     see: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
     def sayHello(self):
         print(f"{self.name} is flying by.")
